@@ -19,6 +19,8 @@ class ListNode:
 def middleOfLinkedList(head: ListNode) -> ListNode:
     # Initialize pointers to first node
     slow = fast = head
+    # Checking if fast and fast.next exist
+    # This is for handling case when list length is even, next will be null
     while fast and fast.next:
         # Fast pointer will move by 2 nodes
         fast = fast.next.next
